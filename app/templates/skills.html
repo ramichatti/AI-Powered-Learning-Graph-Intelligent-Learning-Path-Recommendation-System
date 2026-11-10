@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% from "_icons.html" import icon %}
+{% block title %}Extract skills{% endblock %}
+{% block heading %}Extract skills{% endblock %}
+{% block subtitle %}Find the skills in a job description, see how in-demand they are, and what to learn next{% endblock %}
+{% block content %}
+<div class="grid g-2">
+  <div class="card">
+    <div class="card-head"><div><div class="t">1. Paste a job description</div><div class="d">Skills will be highlighted in the text</div></div></div>
+    <label class="sr-only" for="text">Job description</label>
+    <textarea id="text" placeholder="Paste a job description…"></textarea>
+    <div class="field-row mt-s">
+      <button class="btn btn-primary btn-lg" id="go">{{ icon('spark') }} Extract skills</button>
+      <button class="btn btn-ghost" id="example">Example</button>
+      <button class="btn btn-ghost" id="random">{{ icon('shuffle') }} Try a real ad</button>
+      <button class="btn btn-ghost" id="clear">Clear</button>
+    </div>
+    <div id="msg" class="mt-s"></div>
+    <div id="hl" class="mt"></div>
+    <details class="method"><summary>How does it work?</summary>
+      <p>1) A gazetteer of <b id="n-skills">…</b> canonical skills (the dataset's own technology vocabulary, grouped in 11 categories);
+      2) <b id="n-alias">…</b> aliases normalised to one name (PowerBI → power bi, sklearn → scikit-learn);
+      3) one compiled regular expression, longest match first, with token boundaries that keep <code>c++</code>, <code>c#</code>, <code>node.js</code> intact;
+      4) ambiguity rules: <code>R</code>, <code>C</code>, <code>Go</code>, <code>Word</code>, <code>Spring</code>… only match their case-sensitive technical spelling, and <code>R&amp;D</code> / <code>C-level</code> are rejected.
+      <br><b>Limitations:</b> no deep context understanding ("Excel at teamwork" matches Excel), unseen technologies are missed, and each skill has a single category.</p>
+    </details>
+  </div>
+  <div class="card" id="hl-card">
+    <div class="card-head"><div><div class="t">2. Skills found</div><div class="d" id="hl-sub">Grouped by category</div></div></div>
+    <div id="cats">{{ '' }}<div class="empty">{{ icon('spark') }}Paste a description or try the example.</div></div>
+  </div>
+</div>
+<div id="details" style="display:none">
+<div class="grid g-2 mt">
+  <div class="card">
+    <div class="card-head"><div><div class="t">What to learn next</div><div class="d">Skills that often appear alongside the ones found</div></div></div>
+    <div id="recs"></div>
+  </div>
+  <div class="card">
+    <div class="card-head"><div><div class="t">How in-demand are they?</div><div class="d">Share of all job ads that ask for each skill</div></div></div>
+    <div id="freq"></div>
+  </div>
+</div>
+<details class="more">
+  <summary>Details per skill <span class="sd">Category, which job asks for it most, and similar skills</span></summary>
+  <div class="more-body"><div class="table-wrap"><table class="data" id="tbl"></table></div></div>
+</details>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/pages/skills.js') }}"></script>{% endblock %}

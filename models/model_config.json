@@ -1,0 +1,47 @@
+{
+  "distilbert": {
+    "checkpoint": "distilbert-base-uncased",
+    "source": "https://huggingface.co/distilbert-base-uncased",
+    "files": [
+      "config.json",
+      "vocab.txt",
+      "model.safetensors"
+    ],
+    "implementation": "jobnlp/distilbert.py (NumPy)",
+    "tokenizer": {
+      "type": "WordPiece (uncased, strip accents)",
+      "max_length": 128,
+      "truncation": "head",
+      "padding": "dynamic per batch",
+      "batch_size": 64
+    },
+    "pooling": "mean over attention-mask tokens",
+    "normalisation": "L2; then corpus-mean centering + L2",
+    "embedding_dim": 768,
+    "fine_tuned": false
+  },
+  "embeddings": {
+    "file": "job_embeddings.npy (float16, raw L2-normalised)",
+    "mean_file": "embedding_mean.npy",
+    "corpus_file": "data/processed/embedding_corpus.csv",
+    "n": 15000,
+    "sampling": "class-balanced, 1500 per job_title_short, random_state=42"
+  },
+  "classification": {
+    "pipeline": "classification_pipeline.joblib",
+    "input": "text_tfidf",
+    "C": 8.0,
+    "secondary": "skills_only_pipeline.joblib"
+  },
+  "clustering": {
+    "model": "kmeans_model.joblib",
+    "pca": "pca_2d.joblib",
+    "k": 4
+  },
+  "versions": {
+    "python": "3.13.18",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5"
+  }
+}

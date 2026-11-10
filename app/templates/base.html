@@ -1,0 +1,55 @@
+{% from "_icons.html" import icon %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}JobLens{% endblock %} · JobLens — Data Job Analytics</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232a78d6'/%3E%3Ccircle cx='11' cy='11' r='5' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='m15 15 4 4' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <script>
+    try { const t = localStorage.getItem("joblens-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="/">
+      <div class="brand-mark">{{ icon('search') }}</div>
+      <div><div class="brand-name">JobLens</div><div class="brand-sub">Data-job market explorer</div></div>
+    </a>
+    {% set ns = namespace(group=None) %}
+    <nav class="nav">
+      {% for ep, url, label, ic, group in pages %}
+      {% if group != ns.group %}{% if group != "Start" %}<div class="nav-label">{{ group }}</div>{% endif %}{% set ns.group = group %}{% endif %}
+      <a href="{{ url }}" class="{{ 'active' if active == ep else '' }}">{{ icon(ic) }}<span>{{ label }}</span></a>
+      {% endfor %}
+    </nav>
+    <div class="sidebar-foot">
+      <span class="status-dot" id="status-dot"></span><span id="status-text">Checking models…</span>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open navigation">{{ icon('menu') }}</button>
+      <div>
+        <h1>{% block heading %}{% endblock %}</h1>
+        <div class="subtitle">{% block subtitle %}{% endblock %}</div>
+      </div>
+      <div class="spacer"></div>
+      <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode">{{ icon('moon') }}</button>
+    </header>
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</div>
+<div class="tooltip" id="tooltip" role="tooltip"></div>
+<div class="toast" id="toast"></div>
+<script src="{{ url_for('static', filename='vendor/d3.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

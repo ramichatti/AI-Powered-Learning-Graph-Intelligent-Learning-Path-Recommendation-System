@@ -1,0 +1,680 @@
+{
+  "representation": "DistilBERT mean-pooled embeddings, centered (corpus mean removed) and L2-normalised",
+  "algorithm": "KMeans(n_init=10, k-means++)",
+  "random_state": 42,
+  "k_range": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "inertia": [
+    11412.77734375,
+    10665.919921875,
+    10187.126953125,
+    9875.75390625,
+    9616.8857421875,
+    9413.48828125,
+    9222.537109375,
+    9063.38671875,
+    8916.20703125,
+    8786.779296875,
+    8687.6875,
+    8592.57421875,
+    8506.244140625,
+    8426.7265625
+  ],
+  "silhouette": [
+    0.3633052706718445,
+    0.2683272361755371,
+    0.24359753727912903,
+    0.23890283703804016,
+    0.17668868601322174,
+    0.1490575075149536,
+    0.1261947751045227,
+    0.13157972693443298,
+    0.12933164834976196,
+    0.13284309208393097,
+    0.1088535338640213,
+    0.10256598144769669,
+    0.08532712608575821,
+    0.09024462848901749
+  ],
+  "silhouette_sample": 6000,
+  "k_elbow": 6,
+  "k_selected": 4,
+  "selection_rule": "best cosine silhouette for K in [4,12]; elbow (Kneedle) as cross-check",
+  "final_silhouette": 0.24359753727912903,
+  "ari_vs_job_title_short": 0.06130348857653503,
+  "nmi_vs_job_title_short": 0.11065113365630773,
+  "pca_explained_variance": [
+    0.2985430061817169,
+    0.0842217281460762
+  ],
+  "centroids_2d": [
+    [
+      0.5870608687400818,
+      -0.07824136316776276
+    ],
+    [
+      -0.6792247891426086,
+      -0.03377639502286911
+    ],
+    [
+      0.032195545732975006,
+      0.3886014521121979
+    ],
+    [
+      -0.20203974843025208,
+      -0.19771714508533478
+    ]
+  ],
+  "profiles": [
+    {
+      "cluster": 0,
+      "size": 5414,
+      "label": "Senior Data Engineer / Data Engineer \u00b7 kafka, docker, kubernetes",
+      "top_categories": [
+        {
+          "name": "Senior Data Engineer",
+          "share": 0.16549685999261174
+        },
+        {
+          "name": "Data Engineer",
+          "share": 0.16198743997044698
+        },
+        {
+          "name": "Machine Learning Engineer",
+          "share": 0.15201329885482084
+        },
+        {
+          "name": "Software Engineer",
+          "share": 0.13520502401182122
+        },
+        {
+          "name": "Cloud Engineer",
+          "share": 0.11488732914665682
+        },
+        {
+          "name": "Data Scientist",
+          "share": 0.1014037680088659
+        },
+        {
+          "name": "Senior Data Scientist",
+          "share": 0.09623199113409679
+        },
+        {
+          "name": "Data Analyst",
+          "share": 0.026782415958625783
+        },
+        {
+          "name": "Business Analyst",
+          "share": 0.023457702253417066
+        },
+        {
+          "name": "Senior Data Analyst",
+          "share": 0.022534170668636867
+        }
+      ],
+      "top_titles": [
+        {
+          "name": "senior data engineer",
+          "count": 445
+        },
+        {
+          "name": "data engineer",
+          "count": 318
+        },
+        {
+          "name": "machine learning engineer",
+          "count": 221
+        }
+      ],
+      "top_skills": [
+        {
+          "name": "python",
+          "share": 0.7977465829331363
+        },
+        {
+          "name": "sql",
+          "share": 0.5805319541928334
+        },
+        {
+          "name": "aws",
+          "share": 0.4667528629479128
+        },
+        {
+          "name": "azure",
+          "share": 0.37347617288511264
+        },
+        {
+          "name": "spark",
+          "share": 0.33339490210565204
+        },
+        {
+          "name": "java",
+          "share": 0.28130772072404875
+        },
+        {
+          "name": "docker",
+          "share": 0.19504987070557814
+        },
+        {
+          "name": "kubernetes",
+          "share": 0.19504987070557814
+        },
+        {
+          "name": "gcp",
+          "share": 0.19246398226819358
+        },
+        {
+          "name": "hadoop",
+          "share": 0.18821573697820465
+        }
+      ],
+      "distinctive_skills": [
+        {
+          "name": "kafka",
+          "lift": 2.4977120549181078
+        },
+        {
+          "name": "docker",
+          "lift": 2.471070997114588
+        },
+        {
+          "name": "kubernetes",
+          "lift": 2.448324736890102
+        },
+        {
+          "name": "nosql",
+          "lift": 2.4239180963712252
+        },
+        {
+          "name": "scala",
+          "lift": 2.3397853279207848
+        },
+        {
+          "name": "hadoop",
+          "lift": 2.2786408835133733
+        }
+      ],
+      "purity": 0.16549685999261174
+    },
+    {
+      "cluster": 1,
+      "size": 3995,
+      "label": "Business Analyst / Data Analyst \u00b7 excel, sql",
+      "top_categories": [
+        {
+          "name": "Business Analyst",
+          "share": 0.22728410513141425
+        },
+        {
+          "name": "Data Analyst",
+          "share": 0.18448060075093867
+        },
+        {
+          "name": "Senior Data Analyst",
+          "share": 0.16470588235294117
+        },
+        {
+          "name": "Cloud Engineer",
+          "share": 0.095369211514393
+        },
+        {
+          "name": "Senior Data Scientist",
+          "share": 0.0785982478097622
+        },
+        {
+          "name": "Data Scientist",
+          "share": 0.061827284105131414
+        },
+        {
+          "name": "Software Engineer",
+          "share": 0.05431789737171464
+        },
+        {
+          "name": "Senior Data Engineer",
+          "share": 0.049561952440550686
+        },
+        {
+          "name": "Machine Learning Engineer",
+          "share": 0.04230287859824781
+        },
+        {
+          "name": "Data Engineer",
+          "share": 0.041551939924906134
+        }
+      ],
+      "top_titles": [
+        {
+          "name": "senior data analyst",
+          "count": 147
+        },
+        {
+          "name": "data analyst",
+          "count": 130
+        },
+        {
+          "name": "senior data scientist",
+          "count": 75
+        }
+      ],
+      "top_skills": [
+        {
+          "name": "sql",
+          "share": 0.28836045056320403
+        },
+        {
+          "name": "excel",
+          "share": 0.28410513141426785
+        },
+        {
+          "name": "power bi",
+          "share": 0.1379224030037547
+        },
+        {
+          "name": "tableau",
+          "share": 0.12941176470588237
+        },
+        {
+          "name": "python",
+          "share": 0.08886107634543179
+        },
+        {
+          "name": "sap",
+          "share": 0.07309136420525657
+        },
+        {
+          "name": "azure",
+          "share": 0.07158948685857322
+        },
+        {
+          "name": "word",
+          "share": 0.0658322903629537
+        },
+        {
+          "name": "powerpoint",
+          "share": 0.06508135168961202
+        },
+        {
+          "name": "flow",
+          "share": 0.06483103879849812
+        }
+      ],
+      "distinctive_skills": [
+        {
+          "name": "excel",
+          "lift": 1.6575561926153317
+        },
+        {
+          "name": "sql",
+          "lift": 0.5660786230137496
+        }
+      ],
+      "purity": 0.22728410513141425
+    },
+    {
+      "cluster": 2,
+      "size": 2838,
+      "label": "Senior Data Analyst / Data Analyst \u00b7 tableau, power bi, r",
+      "top_categories": [
+        {
+          "name": "Senior Data Analyst",
+          "share": 0.23819591261451725
+        },
+        {
+          "name": "Data Analyst",
+          "share": 0.19097956307258632
+        },
+        {
+          "name": "Business Analyst",
+          "share": 0.13777307963354474
+        },
+        {
+          "name": "Senior Data Scientist",
+          "share": 0.1226215644820296
+        },
+        {
+          "name": "Data Scientist",
+          "share": 0.09795630725863284
+        },
+        {
+          "name": "Senior Data Engineer",
+          "share": 0.08844256518675123
+        },
+        {
+          "name": "Data Engineer",
+          "share": 0.05919661733615222
+        },
+        {
+          "name": "Software Engineer",
+          "share": 0.028893587033121917
+        },
+        {
+          "name": "Cloud Engineer",
+          "share": 0.026074700493305146
+        },
+        {
+          "name": "Machine Learning Engineer",
+          "share": 0.009866102889358703
+        }
+      ],
+      "top_titles": [
+        {
+          "name": "senior data analyst",
+          "count": 248
+        },
+        {
+          "name": "data analyst",
+          "count": 167
+        },
+        {
+          "name": "senior data engineer",
+          "count": 139
+        }
+      ],
+      "top_skills": [
+        {
+          "name": "sql",
+          "share": 0.9281183932346723
+        },
+        {
+          "name": "python",
+          "share": 0.6138125440451022
+        },
+        {
+          "name": "tableau",
+          "share": 0.4274136715997181
+        },
+        {
+          "name": "excel",
+          "share": 0.339323467230444
+        },
+        {
+          "name": "r",
+          "share": 0.33756166314305847
+        },
+        {
+          "name": "power bi",
+          "share": 0.2741367159971811
+        },
+        {
+          "name": "sql server",
+          "share": 0.13107822410147993
+        },
+        {
+          "name": "azure",
+          "share": 0.12861169837914024
+        },
+        {
+          "name": "aws",
+          "share": 0.12473572938689217
+        },
+        {
+          "name": "sas",
+          "share": 0.11839323467230443
+        }
+      ],
+      "distinctive_skills": [
+        {
+          "name": "tableau",
+          "lift": 2.5063350562923263
+        },
+        {
+          "name": "power bi",
+          "lift": 2.1529061465747206
+        },
+        {
+          "name": "r",
+          "lift": 2.010093270006303
+        },
+        {
+          "name": "excel",
+          "lift": 1.9797168449850875
+        },
+        {
+          "name": "sql",
+          "lift": 1.8219834967308055
+        },
+        {
+          "name": "python",
+          "lift": 1.1265371541265792
+        }
+      ],
+      "purity": 0.23819591261451725
+    },
+    {
+      "cluster": 3,
+      "size": 2753,
+      "label": "Machine Learning Engineer / Software Engineer \u00b7 python, aws, sql",
+      "top_categories": [
+        {
+          "name": "Machine Learning Engineer",
+          "share": 0.17435524881946968
+        },
+        {
+          "name": "Software Engineer",
+          "share": 0.17035960770069017
+        },
+        {
+          "name": "Data Scientist",
+          "share": 0.15474028332727932
+        },
+        {
+          "name": "Cloud Engineer",
+          "share": 0.15365056302215765
+        },
+        {
+          "name": "Senior Data Scientist",
+          "share": 0.11514711224119142
+        },
+        {
+          "name": "Data Engineer",
+          "share": 0.10497638939338903
+        },
+        {
+          "name": "Senior Data Engineer",
+          "share": 0.05630221576462041
+        },
+        {
+          "name": "Data Analyst",
+          "share": 0.027606247729749366
+        },
+        {
+          "name": "Business Analyst",
+          "share": 0.02687976752633491
+        },
+        {
+          "name": "Senior Data Analyst",
+          "share": 0.015982564475118054
+        }
+      ],
+      "top_titles": [
+        {
+          "name": "senior data scientist",
+          "count": 116
+        },
+        {
+          "name": "data scientist",
+          "count": 113
+        },
+        {
+          "name": "machine learning engineer",
+          "count": 113
+        }
+      ],
+      "top_skills": [
+        {
+          "name": "python",
+          "share": 0.6382128586996004
+        },
+        {
+          "name": "sql",
+          "share": 0.2586269524155467
+        },
+        {
+          "name": "aws",
+          "share": 0.15510352342898656
+        },
+        {
+          "name": "r",
+          "share": 0.147838721394842
+        },
+        {
+          "name": "azure",
+          "share": 0.12386487468216491
+        },
+        {
+          "name": "java",
+          "share": 0.10715583000363241
+        },
+        {
+          "name": "linux",
+          "share": 0.08063930257900472
+        },
+        {
+          "name": "spark",
+          "share": 0.07482746095168907
+        },
+        {
+          "name": "go",
+          "share": 0.05884489647657101
+        },
+        {
+          "name": "pytorch",
+          "share": 0.05194333454413367
+        }
+      ],
+      "distinctive_skills": [
+        {
+          "name": "python",
+          "lift": 1.1713193295600153
+        },
+        {
+          "name": "aws",
+          "lift": 0.6549979874534905
+        },
+        {
+          "name": "sql",
+          "lift": 0.5077089760807748
+        }
+      ],
+      "purity": 0.17435524881946968
+    }
+  ],
+  "skills_by_cluster": {
+    "skills": [
+      "python",
+      "sql",
+      "aws",
+      "azure",
+      "excel",
+      "tableau",
+      "r",
+      "spark",
+      "java",
+      "power bi",
+      "gcp",
+      "hadoop",
+      "kubernetes",
+      "docker",
+      "git",
+      "go",
+      "snowflake",
+      "scala"
+    ],
+    "share": [
+      [
+        0.7977,
+        0.5805,
+        0.4668,
+        0.3735,
+        0.07,
+        0.1376,
+        0.1764,
+        0.3334,
+        0.2813,
+        0.0927,
+        0.1925,
+        0.1882,
+        0.195,
+        0.195,
+        0.1771,
+        0.111,
+        0.1402,
+        0.1675
+      ],
+      [
+        0.0889,
+        0.2884,
+        0.0611,
+        0.0716,
+        0.2841,
+        0.1294,
+        0.0498,
+        0.0213,
+        0.0055,
+        0.1379,
+        0.0145,
+        0.0068,
+        0.0073,
+        0.0045,
+        0.008,
+        0.0566,
+        0.0238,
+        0.002
+      ],
+      [
+        0.6138,
+        0.9281,
+        0.1247,
+        0.1286,
+        0.3393,
+        0.4274,
+        0.3376,
+        0.0641,
+        0.0493,
+        0.2741,
+        0.0321,
+        0.0335,
+        0.0004,
+        0.0056,
+        0.031,
+        0.0507,
+        0.0708,
+        0.025
+      ],
+      [
+        0.6382,
+        0.2586,
+        0.1551,
+        0.1239,
+        0.0341,
+        0.0301,
+        0.1478,
+        0.0748,
+        0.1072,
+        0.0287,
+        0.0367,
+        0.0356,
+        0.0396,
+        0.0341,
+        0.0378,
+        0.0588,
+        0.024,
+        0.032
+      ]
+    ]
+  }
+}

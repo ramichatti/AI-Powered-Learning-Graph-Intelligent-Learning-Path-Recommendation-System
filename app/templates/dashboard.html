@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% from "_icons.html" import icon %}
+{% block title %}Overview{% endblock %}
+{% block heading %}Overview{% endblock %}
+{% block subtitle %}What the data-job market looks like, and what you can do with it{% endblock %}
+{% block content %}
+<div id="dash-error"></div>
+
+<div class="section-title">What do you want to do?</div>
+<div class="quick-grid">
+  <a class="quick" href="/classification"><div class="qi">{{ icon('tag') }}</div><div class="qt">Classify a job {{ icon('arrow') }}</div><div class="qd">Paste a job ad and get its category.</div></a>
+  <a class="quick" href="/skills"><div class="qi">{{ icon('spark') }}</div><div class="qt">Extract skills {{ icon('arrow') }}</div><div class="qd">Find the skills in a description and what to learn next.</div></a>
+  <a class="quick" href="/semantic-search"><div class="qi">{{ icon('search') }}</div><div class="qt">Find similar jobs {{ icon('arrow') }}</div><div class="qd">Describe a role in your own words and see matching ads.</div></a>
+  <a class="quick" href="/knowledge-graph"><div class="qi">{{ icon('graph') }}</div><div class="qt">Ask the graph {{ icon('arrow') }}</div><div class="qd">Explore companies, jobs and skills, or ask a question.</div></a>
+</div>
+
+<div class="section-title">The market at a glance</div>
+<div class="grid g-kpi" id="kpis">
+  {% for i in range(6) %}<div class="card kpi"><div class="skeleton" style="height:14px;width:60%"></div><div class="skeleton" style="height:28px;width:45%;margin-top:8px"></div></div>{% endfor %}
+</div>
+
+<div class="grid g-2 mt">
+  <div class="card">
+    <div class="card-head"><div><div class="t">Most demanded skills</div><div class="d">Share of job ads that ask for each skill</div></div></div>
+    <div id="c-skills" class="loading"></div>
+  </div>
+  <div class="card">
+    <div class="card-head"><div><div class="t">Jobs by category</div><div class="d">Number of ads per job title. Click a bar for its top skills.</div></div></div>
+    <div id="c-cats" class="loading"></div>
+  </div>
+</div>
+
+<div class="card mt">
+  <div class="card-head"><div><div class="t">Job families</div><div class="d">Groups of similar ads found automatically. Click one to explore it.</div></div>
+    <div class="right"><a class="btn btn-ghost btn-sm" href="/clustering">See all families</a></div></div>
+  <div id="c-clusters" class="loading"></div>
+</div>
+
+<details class="more">
+  <summary>Model accuracy and more statistics <span class="sd">How well the models perform, ads per month, top countries</span></summary>
+  <div class="more-body">
+    <div class="grid g-side">
+      <div class="card">
+        <div class="card-head"><div><div class="t">Ads per month (2023)</div></div></div>
+        <div id="c-monthly" class="loading"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div><div class="t">Model performance</div><div class="d">Measured on held-out test data</div></div></div>
+        <div id="model-cards" class="loading"></div>
+      </div>
+    </div>
+    <div class="card mt">
+      <div class="card-head"><div><div class="t">Top countries</div></div></div>
+      <div id="c-countries" class="loading"></div>
+    </div>
+  </div>
+</details>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/pages/dashboard.js') }}"></script>{% endblock %}

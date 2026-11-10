@@ -1,0 +1,916 @@
+{
+  "totals": {
+    "raw_postings": 785741,
+    "postings": 564659,
+    "job_categories": 10,
+    "distinct_skills": 237,
+    "companies": 120346,
+    "countries": 161,
+    "clusters": 4,
+    "embedded_postings": 15000,
+    "remote_share": 0.09788031360520243
+  },
+  "category_distribution": [
+    {
+      "name": "Data Engineer",
+      "count": 143773
+    },
+    {
+      "name": "Data Analyst",
+      "count": 133252
+    },
+    {
+      "name": "Data Scientist",
+      "count": 119469
+    },
+    {
+      "name": "Senior Data Engineer",
+      "count": 34983
+    },
+    {
+      "name": "Software Engineer",
+      "count": 34679
+    },
+    {
+      "name": "Business Analyst",
+      "count": 32883
+    },
+    {
+      "name": "Senior Data Scientist",
+      "count": 26139
+    },
+    {
+      "name": "Senior Data Analyst",
+      "count": 20688
+    },
+    {
+      "name": "Machine Learning Engineer",
+      "count": 10529
+    },
+    {
+      "name": "Cloud Engineer",
+      "count": 8264
+    }
+  ],
+  "top_skills": [
+    {
+      "name": "sql",
+      "count": 321773,
+      "share": 0.5698536638927211,
+      "category": "Programming Languages"
+    },
+    {
+      "name": "python",
+      "count": 316512,
+      "share": 0.5605365362103499,
+      "category": "Programming Languages"
+    },
+    {
+      "name": "aws",
+      "count": 122487,
+      "share": 0.21692207155114857,
+      "category": "Cloud Platforms"
+    },
+    {
+      "name": "azure",
+      "count": 113074,
+      "share": 0.20025183340741934,
+      "category": "Cloud Platforms"
+    },
+    {
+      "name": "r",
+      "count": 106883,
+      "share": 0.18928769398876136,
+      "category": "Programming Languages"
+    },
+    {
+      "name": "excel",
+      "count": 106874,
+      "share": 0.18927175516550698,
+      "category": "Data Analysis & Office Tools"
+    },
+    {
+      "name": "tableau",
+      "count": 105170,
+      "share": 0.18625400462934266,
+      "category": "BI & Visualization Tools"
+    },
+    {
+      "name": "spark",
+      "count": 95214,
+      "share": 0.1686221241492653,
+      "category": "Data Engineering & Big Data"
+    },
+    {
+      "name": "power bi",
+      "count": 83250,
+      "share": 0.14743411510309762,
+      "category": "BI & Visualization Tools"
+    },
+    {
+      "name": "java",
+      "count": 72099,
+      "share": 0.12768591309090974,
+      "category": "Programming Languages"
+    },
+    {
+      "name": "hadoop",
+      "count": 53829,
+      "share": 0.09533010188450021,
+      "category": "Data Engineering & Big Data"
+    },
+    {
+      "name": "scala",
+      "count": 47141,
+      "share": 0.08348578522612762,
+      "category": "Programming Languages"
+    },
+    {
+      "name": "snowflake",
+      "count": 46487,
+      "share": 0.08232756406964203,
+      "category": "Data Engineering & Big Data"
+    },
+    {
+      "name": "databricks",
+      "count": 45043,
+      "share": 0.07977026842749341,
+      "category": "Data Engineering & Big Data"
+    },
+    {
+      "name": "gcp",
+      "count": 42665,
+      "share": 0.07555887712761153,
+      "category": "Cloud Platforms"
+    },
+    {
+      "name": "git",
+      "count": 42390,
+      "share": 0.07507185752817187,
+      "category": "DevOps & Engineering Tools"
+    },
+    {
+      "name": "kafka",
+      "count": 41827,
+      "share": 0.07407479558459176,
+      "category": "Data Engineering & Big Data"
+    },
+    {
+      "name": "nosql",
+      "count": 39879,
+      "share": 0.07062492584019736,
+      "category": "Programming Languages"
+    },
+    {
+      "name": "oracle",
+      "count": 38552,
+      "share": 0.0682748349003558,
+      "category": "Databases"
+    },
+    {
+      "name": "airflow",
+      "count": 37447,
+      "share": 0.06631790160078915,
+      "category": "Data Engineering & Big Data"
+    },
+    {
+      "name": "go",
+      "count": 35385,
+      "share": 0.06266614009517249,
+      "category": "Programming Languages"
+    },
+    {
+      "name": "docker",
+      "count": 35069,
+      "share": 0.062106510300907275,
+      "category": "DevOps & Engineering Tools"
+    },
+    {
+      "name": "sql server",
+      "count": 34546,
+      "share": 0.061180287571791114,
+      "category": "Databases"
+    },
+    {
+      "name": "sas",
+      "count": 34523,
+      "share": 0.061139555023474346,
+      "category": "Data Analysis & Office Tools"
+    },
+    {
+      "name": "kubernetes",
+      "count": 31430,
+      "share": 0.05566191276504935,
+      "category": "DevOps & Engineering Tools"
+    },
+    {
+      "name": "redshift",
+      "count": 27714,
+      "share": 0.049080949741348315,
+      "category": "Databases"
+    },
+    {
+      "name": "tensorflow",
+      "count": 27474,
+      "share": 0.04865591445456462,
+      "category": "Machine Learning Frameworks"
+    },
+    {
+      "name": "pyspark",
+      "count": 27328,
+      "share": 0.04839735132177119,
+      "category": "Data Engineering & Big Data"
+    },
+    {
+      "name": "flow",
+      "count": 27216,
+      "share": 0.04819900152127213,
+      "category": "Data Engineering & Big Data"
+    },
+    {
+      "name": "linux",
+      "count": 26512,
+      "share": 0.0469522313467066,
+      "category": "DevOps & Engineering Tools"
+    },
+    {
+      "name": "pandas",
+      "count": 26174,
+      "share": 0.04635363998448621,
+      "category": "Data Analysis & Office Tools"
+    },
+    {
+      "name": "word",
+      "count": 25922,
+      "share": 0.04590735293336332,
+      "category": "Data Analysis & Office Tools"
+    },
+    {
+      "name": "sap",
+      "count": 24849,
+      "share": 0.04400709100536784,
+      "category": "Data Analysis & Office Tools"
+    },
+    {
+      "name": "powerpoint",
+      "count": 24155,
+      "share": 0.0427780306344183,
+      "category": "Data Analysis & Office Tools"
+    },
+    {
+      "name": "pytorch",
+      "count": 22448,
+      "share": 0.039754967157169196,
+      "category": "Machine Learning Frameworks"
+    },
+    {
+      "name": "mysql",
+      "count": 21610,
+      "share": 0.03827088561414942,
+      "category": "Databases"
+    },
+    {
+      "name": "javascript",
+      "count": 21547,
+      "share": 0.038159313851368705,
+      "category": "Programming Languages"
+    },
+    {
+      "name": "jira",
+      "count": 20222,
+      "share": 0.03581276487225033,
+      "category": "Collaboration Tools"
+    },
+    {
+      "name": "bigquery",
+      "count": 20024,
+      "share": 0.035462110760653774,
+      "category": "Databases"
+    },
+    {
+      "name": "mongodb",
+      "count": 18712,
+      "share": 0.033138584526236185,
+      "category": "Databases"
+    }
+  ],
+  "skills_by_category": {
+    "skills": [
+      "sql",
+      "python",
+      "aws",
+      "azure",
+      "r",
+      "excel",
+      "tableau",
+      "spark",
+      "power bi",
+      "java",
+      "hadoop",
+      "scala",
+      "snowflake",
+      "databricks",
+      "gcp",
+      "git",
+      "kafka",
+      "nosql",
+      "oracle",
+      "airflow"
+    ],
+    "jobs": [
+      "Data Engineer",
+      "Data Analyst",
+      "Data Scientist",
+      "Senior Data Engineer",
+      "Software Engineer",
+      "Business Analyst",
+      "Senior Data Scientist",
+      "Senior Data Analyst",
+      "Machine Learning Engineer",
+      "Cloud Engineer"
+    ],
+    "share": {
+      "Data Engineer": [
+        0.6666,
+        0.631,
+        0.3634,
+        0.3596,
+        0.0728,
+        0.0497,
+        0.1095,
+        0.3135,
+        0.1118,
+        0.2074,
+        0.1681,
+        0.1666,
+        0.1573,
+        0.1626,
+        0.1293,
+        0.1126,
+        0.1693,
+        0.1355,
+        0.0949,
+        0.1475
+      ],
+      "Data Analyst": [
+        0.5762,
+        0.3542,
+        0.057,
+        0.0696,
+        0.185,
+        0.4184,
+        0.2872,
+        0.0316,
+        0.2498,
+        0.0327,
+        0.0258,
+        0.0116,
+        0.0392,
+        0.0204,
+        0.0213,
+        0.0183,
+        0.0076,
+        0.0163,
+        0.0653,
+        0.0122
+      ],
+      "Data Scientist": [
+        0.536,
+        0.7735,
+        0.1791,
+        0.1508,
+        0.4023,
+        0.1208,
+        0.1983,
+        0.1651,
+        0.1085,
+        0.1111,
+        0.1058,
+        0.0703,
+        0.0396,
+        0.0591,
+        0.0608,
+        0.0844,
+        0.0245,
+        0.0539,
+        0.0407,
+        0.0267
+      ],
+      "Senior Data Engineer": [
+        0.686,
+        0.6883,
+        0.4605,
+        0.3896,
+        0.0602,
+        0.0358,
+        0.1126,
+        0.3794,
+        0.1007,
+        0.2405,
+        0.1855,
+        0.2028,
+        0.2188,
+        0.1888,
+        0.1478,
+        0.1102,
+        0.228,
+        0.1715,
+        0.0977,
+        0.2044
+      ],
+      "Software Engineer": [
+        0.3249,
+        0.4013,
+        0.2763,
+        0.1898,
+        0.0315,
+        0.0666,
+        0.0462,
+        0.0896,
+        0.0379,
+        0.2583,
+        0.0464,
+        0.0579,
+        0.0391,
+        0.029,
+        0.0856,
+        0.1254,
+        0.0945,
+        0.0753,
+        0.0757,
+        0.0349
+      ],
+      "Business Analyst": [
+        0.4667,
+        0.2172,
+        0.0504,
+        0.0699,
+        0.1078,
+        0.4615,
+        0.247,
+        0.0202,
+        0.2493,
+        0.0313,
+        0.0171,
+        0.0064,
+        0.0322,
+        0.0143,
+        0.0161,
+        0.0142,
+        0.0063,
+        0.0097,
+        0.0633,
+        0.0084
+      ],
+      "Senior Data Scientist": [
+        0.5719,
+        0.7964,
+        0.2311,
+        0.1742,
+        0.3899,
+        0.1047,
+        0.1872,
+        0.2005,
+        0.0894,
+        0.0962,
+        0.1073,
+        0.0882,
+        0.0599,
+        0.0709,
+        0.0831,
+        0.0914,
+        0.0267,
+        0.0547,
+        0.0372,
+        0.0427
+      ],
+      "Senior Data Analyst": [
+        0.704,
+        0.4401,
+        0.0863,
+        0.0948,
+        0.2458,
+        0.3316,
+        0.3953,
+        0.0533,
+        0.2405,
+        0.0311,
+        0.0405,
+        0.0193,
+        0.0796,
+        0.0381,
+        0.0299,
+        0.027,
+        0.0098,
+        0.0187,
+        0.0768,
+        0.0232
+      ],
+      "Machine Learning Engineer": [
+        0.283,
+        0.7872,
+        0.3095,
+        0.2248,
+        0.1296,
+        0.047,
+        0.0336,
+        0.2128,
+        0.022,
+        0.1885,
+        0.0948,
+        0.0879,
+        0.0288,
+        0.0733,
+        0.1362,
+        0.1303,
+        0.069,
+        0.0646,
+        0.0221,
+        0.0915
+      ],
+      "Cloud Engineer": [
+        0.2431,
+        0.342,
+        0.3406,
+        0.3259,
+        0.0381,
+        0.0849,
+        0.0439,
+        0.0693,
+        0.0421,
+        0.1346,
+        0.0341,
+        0.0356,
+        0.0405,
+        0.0473,
+        0.1329,
+        0.0837,
+        0.0568,
+        0.043,
+        0.0514,
+        0.0269
+      ]
+    }
+  },
+  "skill_category_mix": {
+    "categories": [
+      "Programming Languages",
+      "BI & Visualization Tools",
+      "Data Analysis & Office Tools",
+      "Machine Learning Frameworks",
+      "Data Engineering & Big Data",
+      "Databases",
+      "Cloud Platforms",
+      "DevOps & Engineering Tools",
+      "Web & App Frameworks",
+      "Collaboration Tools"
+    ],
+    "jobs": {
+      "Data Engineer": [
+        0.3437,
+        0.0513,
+        0.0346,
+        0.0057,
+        0.2046,
+        0.102,
+        0.1318,
+        0.0985,
+        0.0153,
+        0.0126
+      ],
+      "Data Analyst": [
+        0.3684,
+        0.1842,
+        0.2387,
+        0.004,
+        0.0581,
+        0.0551,
+        0.0388,
+        0.0243,
+        0.0113,
+        0.0172
+      ],
+      "Data Scientist": [
+        0.4303,
+        0.0868,
+        0.1105,
+        0.075,
+        0.0965,
+        0.0426,
+        0.0743,
+        0.0594,
+        0.0144,
+        0.0102
+      ],
+      "Senior Data Engineer": [
+        0.3302,
+        0.0439,
+        0.0251,
+        0.0053,
+        0.2218,
+        0.1129,
+        0.1357,
+        0.0984,
+        0.0143,
+        0.0124
+      ],
+      "Software Engineer": [
+        0.3673,
+        0.023,
+        0.0413,
+        0.0085,
+        0.0728,
+        0.0868,
+        0.1031,
+        0.1952,
+        0.0801,
+        0.0219
+      ],
+      "Business Analyst": [
+        0.303,
+        0.189,
+        0.2798,
+        0.0032,
+        0.0572,
+        0.0528,
+        0.0398,
+        0.0314,
+        0.0156,
+        0.0282
+      ],
+      "Senior Data Scientist": [
+        0.4095,
+        0.0797,
+        0.1,
+        0.0892,
+        0.111,
+        0.0403,
+        0.0882,
+        0.0606,
+        0.012,
+        0.0094
+      ],
+      "Senior Data Analyst": [
+        0.3746,
+        0.1968,
+        0.1851,
+        0.0056,
+        0.0777,
+        0.0609,
+        0.0469,
+        0.0234,
+        0.0096,
+        0.0195
+      ],
+      "Machine Learning Engineer": [
+        0.3174,
+        0.0196,
+        0.0635,
+        0.1728,
+        0.107,
+        0.039,
+        0.1086,
+        0.1403,
+        0.0216,
+        0.0101
+      ],
+      "Cloud Engineer": [
+        0.3027,
+        0.025,
+        0.0539,
+        0.0049,
+        0.0711,
+        0.0651,
+        0.1747,
+        0.2515,
+        0.0317,
+        0.0194
+      ]
+    }
+  },
+  "top_countries": [
+    {
+      "name": "United States",
+      "count": 153354
+    },
+    {
+      "name": "India",
+      "count": 40621
+    },
+    {
+      "name": "United Kingdom",
+      "count": 30448
+    },
+    {
+      "name": "France",
+      "count": 28677
+    },
+    {
+      "name": "Germany",
+      "count": 19358
+    },
+    {
+      "name": "Spain",
+      "count": 18442
+    },
+    {
+      "name": "Singapore",
+      "count": 16537
+    },
+    {
+      "name": "Sudan",
+      "count": 16531
+    },
+    {
+      "name": "Netherlands",
+      "count": 14707
+    },
+    {
+      "name": "Canada",
+      "count": 12325
+    },
+    {
+      "name": "Poland",
+      "count": 11362
+    },
+    {
+      "name": "Italy",
+      "count": 11328
+    },
+    {
+      "name": "Mexico",
+      "count": 10648
+    },
+    {
+      "name": "Australia",
+      "count": 9996
+    },
+    {
+      "name": "Portugal",
+      "count": 9214
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2023-01",
+      "count": 65942
+    },
+    {
+      "month": "2023-02",
+      "count": 46227
+    },
+    {
+      "month": "2023-03",
+      "count": 45970
+    },
+    {
+      "month": "2023-04",
+      "count": 44196
+    },
+    {
+      "month": "2023-05",
+      "count": 36896
+    },
+    {
+      "month": "2023-06",
+      "count": 43253
+    },
+    {
+      "month": "2023-07",
+      "count": 44630
+    },
+    {
+      "month": "2023-08",
+      "count": 52722
+    },
+    {
+      "month": "2023-09",
+      "count": 45245
+    },
+    {
+      "month": "2023-10",
+      "count": 49146
+    },
+    {
+      "month": "2023-11",
+      "count": 47863
+    },
+    {
+      "month": "2023-12",
+      "count": 42569
+    }
+  ],
+  "salary_by_category": [
+    {
+      "name": "Business Analyst",
+      "n": 474,
+      "q1": 74387.5,
+      "median": 87555.0,
+      "q3": 107476.98828125
+    },
+    {
+      "name": "Cloud Engineer",
+      "n": 55,
+      "q1": 80425.0,
+      "median": 90000.0,
+      "q3": 136000.0
+    },
+    {
+      "name": "Data Analyst",
+      "n": 4109,
+      "q1": 70500.0,
+      "median": 90000.0,
+      "q3": 111175.0
+    },
+    {
+      "name": "Software Engineer",
+      "n": 403,
+      "q1": 79200.0,
+      "median": 99150.0,
+      "q3": 148576.5
+    },
+    {
+      "name": "Senior Data Analyst",
+      "n": 855,
+      "q1": 92500.0,
+      "median": 111175.0,
+      "q3": 125000.0
+    },
+    {
+      "name": "Machine Learning Engineer",
+      "n": 479,
+      "q1": 85000.0,
+      "median": 116950.0,
+      "q3": 166000.0
+    },
+    {
+      "name": "Data Engineer",
+      "n": 3764,
+      "q1": 100000.0,
+      "median": 125000.0,
+      "q3": 147500.0
+    },
+    {
+      "name": "Data Scientist",
+      "n": 4257,
+      "q1": 100000.0,
+      "median": 127500.0,
+      "q3": 157500.0
+    },
+    {
+      "name": "Senior Data Engineer",
+      "n": 1317,
+      "q1": 125000.0,
+      "median": 147500.0,
+      "q3": 165000.0
+    },
+    {
+      "name": "Senior Data Scientist",
+      "n": 1283,
+      "q1": 125000.0,
+      "median": 154500.0,
+      "q3": 172500.0
+    }
+  ],
+  "schedule_types": [
+    {
+      "name": "Full-time",
+      "count": 501023
+    },
+    {
+      "name": "Contractor",
+      "count": 27962
+    },
+    {
+      "name": "Unknown",
+      "count": 9171
+    },
+    {
+      "name": "Internship",
+      "count": 6078
+    },
+    {
+      "name": "Part-time",
+      "count": 5258
+    },
+    {
+      "name": "Full-time and Part-time",
+      "count": 4781
+    }
+  ],
+  "skills_per_posting": {
+    "median": 5.0,
+    "mean": 5.345435032470925
+  },
+  "skill_extraction_eval": {
+    "titles_with_extracted_skill": 47574,
+    "extracted_mentions": 58234,
+    "precision_vs_tags": 0.9222962530480475,
+    "concept_mentions_not_evaluable": 30945
+  },
+  "semantic_eval": {
+    "label_agreement@10_semantic": 0.47959999999999997,
+    "label_agreement@10_tfidf": 0.4726,
+    "random_baseline": 0.10000000000000002
+  }
+}

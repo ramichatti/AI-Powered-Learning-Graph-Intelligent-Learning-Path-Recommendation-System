@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% from "_icons.html" import icon %}
+{% block title %}Find similar jobs{% endblock %}
+{% block heading %}Find similar jobs{% endblock %}
+{% block subtitle %}Describe a role or your skills in your own words. Matching is by meaning, so exact keywords aren't needed.{% endblock %}
+{% block content %}
+<div class="card">
+  <label class="sr-only" for="q">What are you looking for?</label>
+  <textarea id="q" style="min-height:96px" placeholder="e.g. I build dashboards and KPI reports for business stakeholders"></textarea>
+  <div class="field-row mt-s">
+    <button class="btn btn-primary btn-lg" id="go">{{ icon('search') }} Search</button>
+    <select id="cat" style="width:auto" aria-label="Job title filter"><option value="">All job titles</option></select>
+    <select id="k" style="width:auto" aria-label="Number of results"><option value="5">5 results</option><option value="10" selected>10 results</option><option value="20">20 results</option><option value="30">30 results</option></select>
+  </div>
+  <div class="chips mt-s" id="examples"></div>
+  <div id="msg" class="mt-s"></div>
+</div>
+
+<div class="card flush mt" id="res-card">
+  <div class="card-head" style="padding:18px 22px 6px"><div><div class="t">Matching job ads</div><div class="d" id="res-sub">Run a search to see results</div></div></div>
+  <div id="results">{{ '' }}<div class="empty">{{ icon('search') }}Results will appear here.</div></div>
+</div>
+
+<details class="more" id="where-card" style="display:none">
+  <summary>Where your search lands <span class="sd">Your query on the map of job families</span></summary>
+  <div class="more-body">
+    <div id="where-txt" class="note mb"></div>
+    <div id="mini"></div>
+  </div>
+</details>
+
+<details class="more">
+  <summary>About the match score</summary>
+  <div class="more-body note">The score compares the meaning of your text with each ad, using DistilBERT (a pre-trained language model, not a dedicated
+    sentence-similarity model). Read it as a <b>ranking</b>: higher means closer. It is not a percentage. Green skills appear in both your text and the ad.</div>
+</details>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/pages/semantic_search.js') }}"></script>{% endblock %}

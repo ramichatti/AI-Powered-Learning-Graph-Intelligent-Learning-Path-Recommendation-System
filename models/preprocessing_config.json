@@ -1,0 +1,36 @@
+{
+  "source": "https://huggingface.co/datasets/lukebarousse/data_jobs",
+  "raw_file": "data_jobs.csv",
+  "kept_columns": [
+    "job_title_short",
+    "job_title",
+    "company_name",
+    "job_location",
+    "job_country",
+    "job_via",
+    "job_schedule_type",
+    "job_work_from_home",
+    "job_posted_date",
+    "job_no_degree_mention",
+    "job_health_insurance",
+    "salary_year_avg",
+    "salary_hour_avg",
+    "job_skills"
+  ],
+  "cleaning_report": {
+    "raw_rows": 785741,
+    "exact_duplicates_removed": 101,
+    "rows_without_skills": 116986,
+    "rows_after_dropping_no_skills": 668654,
+    "cross_platform_duplicates_removed": 103995,
+    "final_rows": 564659
+  },
+  "text_tfidf": "clean_for_tfidf(job_title + ' | skills: ' + ', '.join(skills))",
+  "text_embed": "job_title + '. Skills: ' + ', '.join(skills) + '.'",
+  "near_duplicate_key": [
+    "job_title",
+    "company_name",
+    "job_location",
+    "skills"
+  ]
+}

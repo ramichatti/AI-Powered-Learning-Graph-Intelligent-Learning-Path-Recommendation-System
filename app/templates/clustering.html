@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "_icons.html" import icon %}
+{% block title %}Job families{% endblock %}
+{% block heading %}Job families{% endblock %}
+{% block subtitle %}Groups of similar job ads, found automatically from what the ads say. Pick a family to see its skills and ads.{% endblock %}
+{% block content %}
+<div id="err"></div>
+<div class="grid g-4" style="gap:12px" id="cards"></div>
+
+<div class="card mt" id="detail-card">
+  <div class="card-head"><div><div class="t" id="d-title">Select a family</div><div class="d" id="d-sub">Click a family above or a point on the map</div></div></div>
+  <div id="detail"></div>
+</div>
+
+<div class="card mt">
+  <div class="card-head"><div><div class="t">Family map</div>
+    <div class="d">Each dot is a job ad; similar ads sit close together. Scroll to zoom, drag to pan, click a family to highlight it.</div></div>
+    <div class="right"><button class="icon-btn" id="reset" title="Reset zoom">{{ icon('fit') }}</button><button class="btn btn-ghost btn-sm" id="all">Show all</button></div></div>
+  <div id="legend" class="mb"></div>
+  <div id="scatter" class="loading" style="min-height:520px"></div>
+  <div class="hint" id="sc-note"></div>
+</div>
+
+<details class="more">
+  <summary>How the families were found <span class="sd">K-Means on DistilBERT embeddings: quality scores and choice of K</span></summary>
+  <div class="more-body">
+    <div class="grid g-kpi" id="kpis"></div>
+    <div class="grid g-2 mt">
+      <div class="card"><div class="card-head"><div><div class="t">Elbow method</div><div class="d">K-Means inertia vs number of clusters</div></div></div><div id="elbow"></div></div>
+      <div class="card"><div class="card-head"><div><div class="t">Silhouette score (cosine)</div><div class="d" id="sil-sub"></div></div></div><div id="sil"></div></div>
+    </div>
+    <div class="card mt"><div class="card-head"><div><div class="t">Family × job title</div><div class="d">Share of each family's ads belonging to each job title. Families regroup titles; they don't copy them.</div></div></div><div id="ct"></div></div>
+  </div>
+</details>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/pages/clustering.js') }}"></script>{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Market insights{% endblock %}
+{% block heading %}Market insights{% endblock %}
+{% block subtitle %}Which skills employers want, what jobs pay, and how well the models perform{% endblock %}
+{% block content %}
+<div id="err"></div>
+<div class="page-tabs" role="tablist" id="page-tabs">
+  <button class="on" data-tab="skills" role="tab">Skills</button>
+  <button data-tab="jobs" role="tab">Jobs &amp; salaries</button>
+  <button data-tab="models" role="tab">Models</button>
+</div>
+
+<section class="tab-panel" data-panel="skills">
+  <div class="grid g-2">
+    <div class="card">
+      <div class="card-head"><div><div class="t">Most demanded skills</div><div class="d">Top 25 across all ads</div></div>
+        <div class="right"><select id="skill-cat" style="width:auto;padding:6px 10px;font-size:12.5px" aria-label="Skill category"><option value="">All skill types</option></select></div></div>
+      <div id="c-top" class="loading"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="t">Top skills for a job title</div><div class="d">Share of that title's ads asking for each skill</div></div>
+        <div class="right"><select id="job-sel" style="width:auto;padding:6px 10px;font-size:12.5px" aria-label="Job title"></select></div></div>
+      <div id="c-job" class="loading"></div>
+    </div>
+  </div>
+  <div class="card mt">
+    <div class="card-head"><div><div class="t">Skills by job title</div><div class="d">% of each title's ads that ask for the skill (20 most common skills)</div></div></div>
+    <div id="c-heat" class="loading"></div>
+  </div>
+  <div class="grid g-2 mt">
+    <div class="card">
+      <div class="card-head"><div><div class="t">Skills by job family</div><div class="d">% of each family's ads that ask for the skill</div></div></div>
+      <div id="c-skcl" class="loading"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="t">Type of skills per job title</div><div class="d">Share of skill mentions in each skill type</div></div></div>
+      <div id="c-mix" class="loading"></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab-panel" data-panel="jobs" hidden>
+  <div class="grid g-2">
+    <div class="card">
+      <div class="card-head"><div><div class="t">Yearly salary by job title</div><div class="d">Bar = middle 50% of salaries, line = median (only ads that show a salary)</div></div></div>
+      <div id="c-sal" class="loading"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="t">Ads per job title</div></div></div>
+      <div id="c-cat" class="loading"></div>
+    </div>
+  </div>
+  <div class="grid g-2 mt">
+    <div class="card"><div class="card-head"><div><div class="t">Ads per month (2023)</div></div></div><div id="c-month" class="loading"></div></div>
+    <div class="card"><div class="card-head"><div><div class="t">Contract type &amp; key facts</div></div></div><div id="c-sched" class="loading"></div><div id="facts" class="note mt"></div></div>
+  </div>
+  <div class="card mt">
+    <div class="card-head"><div><div class="t">Ads per job family</div><div class="d">Click a family to explore it</div></div></div>
+    <div id="c-csize" class="loading"></div>
+  </div>
+</section>
+
+<section class="tab-panel" data-panel="models" hidden>
+  <div class="card">
+    <div class="card-head"><div><div class="t">Job classifier scores</div><div class="d">Measured on held-out test ads (macro averages)</div></div></div>
+    <div id="c-metrics" class="loading"></div>
+    <div class="table-wrap mt"><table class="data" id="t-metrics"></table></div>
+  </div>
+  <div class="grid g-2 mt">
+    <div class="card"><div class="card-head"><div><div class="t">Elbow curve (K-Means)</div><div class="d">Inertia for K = 2…15</div></div></div><div id="c-elbow"></div></div>
+    <div class="card"><div class="card-head"><div><div class="t">Silhouette score</div><div class="d">Cosine silhouette for each K (chosen K highlighted)</div></div></div><div id="c-sil"></div></div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+  (function () {
+    const tabs = document.querySelectorAll("#page-tabs button");
+    const show = (name) => {
+      tabs.forEach((b) => b.classList.toggle("on", b.dataset.tab === name));
+      document.querySelectorAll(".tab-panel").forEach((p) => (p.hidden = p.dataset.panel !== name));
+    };
+    tabs.forEach((b) => b.addEventListener("click", () => show(b.dataset.tab)));
+    const m = location.hash.match(/tab=(\w+)/); if (m) show(m[1]);
+  })();
+</script>
+<script src="{{ url_for('static', filename='js/pages/analytics.js') }}"></script>
+{% endblock %}

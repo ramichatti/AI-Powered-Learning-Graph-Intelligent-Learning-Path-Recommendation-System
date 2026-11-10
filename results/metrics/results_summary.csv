@@ -1,0 +1,7 @@
+component,evaluation,result
+Skill extraction (dictionary + rules),precision vs dataset tags on titles,"92.2% on 58,234 mentions"
+TF-IDF + LogReg (title + skills),test accuracy / macro-F1,0.949 / 0.918
+TF-IDF + LogReg (skills only),test accuracy / macro-F1,0.515 / 0.236
+DistilBERT semantic similarity,label agreement@10 (semantic / TF-IDF / random),0.480 / 0.473 / 0.100
+K-Means on DistilBERT (K=4),silhouette (cosine) / NMI vs categories,0.244 / 0.111
+Knowledge graph,nodes / edges / Louvain communities / modularity,63 / 286 / 4 / 0.189

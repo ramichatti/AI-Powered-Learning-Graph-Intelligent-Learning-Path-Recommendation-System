@@ -1,0 +1,81 @@
+[
+  {
+    "question": "Which companies offer jobs requiring Python and AWS?",
+    "answer": "91,928 postings match the query (requiring python + aws), from 28,620 companies. Top employers: Capital One (1403), Emprego (609), Dice (587), Harnham (518), Booz Allen Hamilton (507).",
+    "parsed": {
+      "intent": "companies",
+      "jobs": [],
+      "skills": [
+        "python",
+        "aws"
+      ],
+      "country": null
+    }
+  },
+  {
+    "question": "What skills does a Data Engineer need?",
+    "answer": "Across 143,773 postings (Data Engineer postings), the most requested skills are sql (67%), python (63%), aws (36%), azure (36%), spark (31%), java (21%).",
+    "parsed": {
+      "intent": "skills",
+      "jobs": [
+        "Data Engineer"
+      ],
+      "skills": [],
+      "country": null
+    }
+  },
+  {
+    "question": "Which jobs require Spark and Kafka?",
+    "answer": "28,995 postings match the query (requiring spark + kafka). They are mostly Data Engineer (61%), Senior Data Engineer (21%), Data Scientist (7%), Software Engineer (4%).",
+    "parsed": {
+      "intent": "jobs",
+      "jobs": [],
+      "skills": [
+        "spark",
+        "kafka"
+      ],
+      "country": null
+    }
+  },
+  {
+    "question": "Which companies hire data scientists in France?",
+    "answer": "6,692 postings match the query (Data Scientist postings in France), from 2,675 companies. Top employers: Free-Work (ex Freelance-info Carriere-info) (67), BNP Paribas (63), Soci\u00e9t\u00e9 G\u00e9n\u00e9rale (49), Carrefour (47), OpenClassrooms (45).",
+    "parsed": {
+      "intent": "companies",
+      "jobs": [
+        "Data Scientist"
+      ],
+      "skills": [],
+      "country": "France"
+    }
+  },
+  {
+    "question": "Which skills should a data analyst who knows Excel and SQL learn next?",
+    "answer": "Skills most connected to excel + sql in the graph (Personalised PageRank weighted by lift): powerpoint, tableau, power bi, word, vba, sas.",
+    "parsed": {
+      "intent": "recommend",
+      "jobs": [
+        "Data Analyst"
+      ],
+      "skills": [
+        "excel",
+        "sql"
+      ],
+      "country": null
+    }
+  },
+  {
+    "question": "What is the salary of a senior data scientist with PyTorch?",
+    "answer": "Median advertised yearly salary for Senior Data Scientist postings requiring pytorch: $157,500 (IQR $131,818-$175,000, based on the 170 postings that publish a salary, 4.8% of matches).",
+    "parsed": {
+      "intent": "salary",
+      "jobs": [
+        "Senior Data Scientist"
+      ],
+      "skills": [
+        "pytorch"
+      ],
+      "country": null
+    }
+  }
+]

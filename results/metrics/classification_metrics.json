@@ -1,0 +1,384 @@
+{
+  "split": {
+    "train": 451727,
+    "test": 112932,
+    "stratified": true,
+    "random_state": 42
+  },
+  "grid_search_val_macro_f1": {
+    "0.5": 0.8868551474986164,
+    "2.0": 0.9067122998298144,
+    "8.0": 0.9147856608823648
+  },
+  "best_C": 8.0,
+  "models": [
+    {
+      "model": "Majority-class baseline",
+      "accuracy": 0.2546222505578578,
+      "precision_macro": 0.02546222505578578,
+      "recall_macro": 0.1,
+      "f1_macro": 0.04058946833513308,
+      "precision_weighted": 0.06483249047914853,
+      "recall_weighted": 0.2546222505578578,
+      "f1_weighted": 0.1033498177643849
+    },
+    {
+      "model": "TF-IDF + LogReg (skills only)",
+      "accuracy": 0.515026741756101,
+      "precision_macro": 0.44786512990846744,
+      "recall_macro": 0.2551016031769703,
+      "f1_macro": 0.23638786868651174,
+      "precision_weighted": 0.48989989947112156,
+      "recall_weighted": 0.515026741756101,
+      "f1_weighted": 0.4452221086307515
+    },
+    {
+      "model": "TF-IDF + LogReg (title + skills) - MAIN",
+      "accuracy": 0.9487124995572557,
+      "precision_macro": 0.9243635953044855,
+      "recall_macro": 0.9126967161397973,
+      "f1_macro": 0.9182997434407735,
+      "precision_weighted": 0.9485473612774137,
+      "recall_weighted": 0.9487124995572557,
+      "f1_weighted": 0.9485769022988363
+    }
+  ],
+  "classification_report": {
+    "Business Analyst": {
+      "precision": 0.9081203007518797,
+      "recall": 0.9183394160583942,
+      "f1-score": 0.9132012702253137,
+      "support": 6576.0
+    },
+    "Cloud Engineer": {
+      "precision": 0.833989501312336,
+      "recall": 0.7689050211736237,
+      "f1-score": 0.8001259049417689,
+      "support": 1653.0
+    },
+    "Data Analyst": {
+      "precision": 0.95896053321351,
+      "recall": 0.9609756097560975,
+      "f1-score": 0.9599670140190419,
+      "support": 26650.0
+    },
+    "Data Engineer": {
+      "precision": 0.9719768609927604,
+      "recall": 0.975830290384281,
+      "f1-score": 0.9738997639872276,
+      "support": 28755.0
+    },
+    "Data Scientist": {
+      "precision": 0.9534000834376304,
+      "recall": 0.9564325772160375,
+      "f1-score": 0.9549139227812135,
+      "support": 23894.0
+    },
+    "Machine Learning Engineer": {
+      "precision": 0.9289617486338798,
+      "recall": 0.8879392212725546,
+      "f1-score": 0.9079873755765963,
+      "support": 2106.0
+    },
+    "Senior Data Analyst": {
+      "precision": 0.9027568922305764,
+      "recall": 0.8706792361614697,
+      "f1-score": 0.886427956195398,
+      "support": 4137.0
+    },
+    "Senior Data Engineer": {
+      "precision": 0.9510127855193219,
+      "recall": 0.9461197656138345,
+      "f1-score": 0.9485599656111191,
+      "support": 6997.0
+    },
+    "Senior Data Scientist": {
+      "precision": 0.9275165176836377,
+      "recall": 0.9129686304514154,
+      "f1-score": 0.9201850780798149,
+      "support": 5228.0
+    },
+    "Software Engineer": {
+      "precision": 0.9069407292693228,
+      "recall": 0.9287773933102653,
+      "f1-score": 0.9177291829902414,
+      "support": 6936.0
+    },
+    "accuracy": 0.9487124995572557,
+    "macro avg": {
+      "precision": 0.9243635953044855,
+      "recall": 0.9126967161397973,
+      "f1-score": 0.9182997434407735,
+      "support": 112932.0
+    },
+    "weighted avg": {
+      "precision": 0.9485473612774137,
+      "recall": 0.9487124995572557,
+      "f1-score": 0.9485769022988363,
+      "support": 112932.0
+    }
+  },
+  "labels": [
+    "Business Analyst",
+    "Cloud Engineer",
+    "Data Analyst",
+    "Data Engineer",
+    "Data Scientist",
+    "Machine Learning Engineer",
+    "Senior Data Analyst",
+    "Senior Data Engineer",
+    "Senior Data Scientist",
+    "Software Engineer"
+  ],
+  "confusion_matrix": [
+    [
+      6039,
+      37,
+      157,
+      24,
+      94,
+      8,
+      53,
+      9,
+      28,
+      127
+    ],
+    [
+      51,
+      1271,
+      23,
+      68,
+      44,
+      15,
+      2,
+      12,
+      4,
+      163
+    ],
+    [
+      190,
+      25,
+      25610,
+      95,
+      436,
+      10,
+      217,
+      5,
+      13,
+      49
+    ],
+    [
+      32,
+      39,
+      162,
+      28060,
+      152,
+      17,
+      2,
+      217,
+      0,
+      74
+    ],
+    [
+      106,
+      12,
+      379,
+      227,
+      22853,
+      36,
+      18,
+      11,
+      183,
+      69
+    ],
+    [
+      21,
+      14,
+      16,
+      32,
+      53,
+      1870,
+      1,
+      3,
+      15,
+      81
+    ],
+    [
+      71,
+      8,
+      294,
+      10,
+      31,
+      1,
+      3602,
+      14,
+      90,
+      16
+    ],
+    [
+      8,
+      10,
+      14,
+      257,
+      10,
+      2,
+      7,
+      6620,
+      19,
+      50
+    ],
+    [
+      24,
+      16,
+      27,
+      8,
+      214,
+      14,
+      81,
+      39,
+      4773,
+      32
+    ],
+    [
+      108,
+      92,
+      24,
+      88,
+      83,
+      40,
+      7,
+      31,
+      21,
+      6442
+    ]
+  ],
+  "skills_only_report": {
+    "Business Analyst": {
+      "precision": 0.35454545454545455,
+      "recall": 0.005930656934306569,
+      "f1-score": 0.011666168112473826,
+      "support": 6576.0
+    },
+    "Cloud Engineer": {
+      "precision": 0.3670212765957447,
+      "recall": 0.041742286751361164,
+      "f1-score": 0.07495926127104835,
+      "support": 1653.0
+    },
+    "Data Analyst": {
+      "precision": 0.4959541047673923,
+      "recall": 0.7428517823639775,
+      "f1-score": 0.5947992248411375,
+      "support": 26650.0
+    },
+    "Data Engineer": {
+      "precision": 0.5320982858252804,
+      "recall": 0.7621283255086072,
+      "f1-score": 0.6266710513146795,
+      "support": 28755.0
+    },
+    "Data Scientist": {
+      "precision": 0.5264588267267151,
+      "recall": 0.5675064869841802,
+      "f1-score": 0.5462125636945883,
+      "support": 23894.0
+    },
+    "Machine Learning Engineer": {
+      "precision": 0.478494623655914,
+      "recall": 0.04226020892687559,
+      "f1-score": 0.07766143106457242,
+      "support": 2106.0
+    },
+    "Senior Data Analyst": {
+      "precision": 0.2,
+      "recall": 0.00024172105390379503,
+      "f1-score": 0.0004828585224529213,
+      "support": 4137.0
+    },
+    "Senior Data Engineer": {
+      "precision": 0.375,
+      "recall": 0.0004287551807917679,
+      "f1-score": 0.0008565310492505353,
+      "support": 6997.0
+    },
+    "Senior Data Scientist": {
+      "precision": 0.6666666666666666,
+      "recall": 0.00038255547054322876,
+      "f1-score": 0.0007646721468170522,
+      "support": 5228.0
+    },
+    "Software Engineer": {
+      "precision": 0.4824120603015075,
+      "recall": 0.3875432525951557,
+      "f1-score": 0.42980492484809724,
+      "support": 6936.0
+    },
+    "accuracy": 0.515026741756101,
+    "macro avg": {
+      "precision": 0.44786512990846744,
+      "recall": 0.2551016031769703,
+      "f1-score": 0.23638786868651174,
+      "support": 112932.0
+    },
+    "weighted avg": {
+      "precision": 0.48989989947112156,
+      "recall": 0.515026741756101,
+      "f1-score": 0.4452221086307515,
+      "support": 112932.0
+    }
+  },
+  "top_features": {
+    "Business Analyst": "business, bi, analyst, business analyst, skills, marketing, bi analyst, sales",
+    "Cloud Engineer": "cloud, skills, cloud engineer, web, infrastructure, aws, network, cyber",
+    "Data Analyst": "data analyst, data, analyst, analytics, intelligence engineer, scientist analyst, bi engineer, science analyst",
+    "Data Engineer": "data, data engineer, engineer, data engineering, analyst analytics, senior software, customer analyst, engineering",
+    "Data Scientist": "data scientist, data, skills, scientist, data science, analyst scientist, database engineer, science",
+    "Machine Learning Engineer": "ml, learning, engineer, learning engineer, ai, mlops, skills, automation",
+    "Senior Data Analyst": "senior, data analyst, analyst, sr, senior data, data, analytics, scientist sr",
+    "Senior Data Engineer": "senior, senior data, data engineer, engineer, sr, data, data engineering, snr",
+    "Senior Data Scientist": "senior, data scientist, sr, senior data, scientist, chief, snr, lead",
+    "Software Engineer": "software, software engineer, skills, developer, devops, java engineer, product analyst, python engineer"
+  },
+  "top_confusions": [
+    {
+      "true": "Data Analyst",
+      "pred": "Data Scientist",
+      "count": 436
+    },
+    {
+      "true": "Data Scientist",
+      "pred": "Data Analyst",
+      "count": 379
+    },
+    {
+      "true": "Senior Data Analyst",
+      "pred": "Data Analyst",
+      "count": 294
+    },
+    {
+      "true": "Senior Data Engineer",
+      "pred": "Data Engineer",
+      "count": 257
+    },
+    {
+      "true": "Data Scientist",
+      "pred": "Data Engineer",
+      "count": 227
+    },
+    {
+      "true": "Data Analyst",
+      "pred": "Senior Data Analyst",
+      "count": 217
+    },
+    {
+      "true": "Data Engineer",
+      "pred": "Senior Data Engineer",
+      "count": 217
+    },
+    {
+      "true": "Senior Data Scientist",
+      "pred": "Data Scientist",
+      "count": 214
+    }
+  ]
+}

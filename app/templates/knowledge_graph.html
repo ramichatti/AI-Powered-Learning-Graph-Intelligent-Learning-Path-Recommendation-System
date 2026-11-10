@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% from "_icons.html" import icon %}
+{% block title %}Ask the graph{% endblock %}
+{% block heading %}Ask the graph{% endblock %}
+{% block subtitle %}Ask a question in plain English, or explore how companies, jobs and skills connect{% endblock %}
+{% block content %}
+<div class="card">
+  <label class="sr-only" for="question">Your question</label>
+  <div class="field-row" style="flex-wrap:nowrap;align-items:stretch">
+    <textarea id="question" style="min-height:48px;height:48px;resize:none" placeholder="e.g. Which companies offer jobs requiring Python and AWS?"></textarea>
+    <button class="btn btn-primary btn-lg" id="ask">{{ icon('chat') }} Ask</button>
+  </div>
+  <div class="chips mt-s" id="qa-ex"></div>
+  <div id="qa-out" class="mt"></div>
+</div>
+
+<div class="section-title">Explore the graph</div>
+<div class="card">
+  <div class="field-row" style="gap:12px">
+    <div style="position:relative;min-width:220px;flex:1;max-width:360px">
+      <input type="search" id="node-search" placeholder="Search a skill, job or company…" autocomplete="off" aria-label="Search the graph">
+      <div id="suggest" class="card" style="position:absolute;left:0;right:0;top:42px;padding:6px;z-index:30;display:none;max-height:280px;overflow:auto"></div>
+    </div>
+    <div style="position:relative;min-width:200px">
+      <details id="jobs-dd" class="dd"><summary id="jobs-sum">All categories</summary><div id="jobs" class="dd-menu"></div></details></div>
+    <div class="toggle-group" id="type-toggles">
+      <label class="toggle"><input type="checkbox" value="job" checked> Jobs</label>
+      <label class="toggle"><input type="checkbox" value="company" checked> Companies</label>
+      <label class="toggle"><input type="checkbox" value="skill" checked> Skills</label>
+    </div>
+    <button class="btn btn-primary" id="apply" style="margin-left:auto">{{ icon('refresh') }} Update graph</button>
+  </div>
+  <details class="method" style="margin-top:14px">
+    <summary>More filters</summary>
+    <div class="grid g-3 mt-s" style="gap:16px;align-items:end">
+      <div><label class="field" for="n-comp">Companies shown: <span id="n-comp-v" class="num">20</span></label><input type="range" id="n-comp" min="0" max="60" value="20"></div>
+      <div><label class="field" for="n-skill">Skills shown: <span id="n-skill-v" class="num">30</span></label><input type="range" id="n-skill" min="5" max="70" value="30"></div>
+      <div><label class="field" for="min-share">Hide job→skill links below: <span id="min-share-v" class="num">15%</span></label><input type="range" id="min-share" min="5" max="50" value="15"></div>
+    </div>
+    <div class="field-row mt" style="gap:12px">
+      <div class="tabs" id="color-mode"><button data-m="type" class="on">Colour by type</button><button data-m="community">Colour by community</button></div>
+      <select id="community" style="width:auto;padding:7px 10px;font-size:12.5px" aria-label="Community"><option value="">All communities</option></select>
+      <select id="cluster" style="width:auto;padding:7px 10px;font-size:12.5px" aria-label="Job family"><option value="">All postings</option></select>
+    </div>
+  </details>
+</div>
+
+<div class="card mt" style="padding:12px">
+    <div class="graph-wrap" id="graph-wrap">
+      <div id="cy"></div>
+      <div class="graph-overlay" id="overlay"></div>
+      <div class="graph-tools">
+        <button class="icon-btn" id="z-in" title="Zoom in">{{ icon('zoom-in') }}</button>
+        <button class="icon-btn" id="z-out" title="Zoom out">{{ icon('zoom-out') }}</button>
+        <button class="icon-btn" id="z-fit" title="Fit to screen">{{ icon('fit') }}</button>
+        <button class="icon-btn" id="relayout" title="Re-run layout">{{ icon('refresh') }}</button>
+      </div>
+    </div>
+    <div class="graph-legend" id="g-legend"></div>
+    <div class="hint mt-s">Hover a node to highlight its links; click it to see its details. Scroll to zoom, drag to move.</div>
+</div>
+<div class="card mt" id="node-card">
+  <div class="card-head"><div><div class="t">Selection</div><div class="d" id="node-sub">Hover or click a node</div></div></div>
+  <div id="node-info" class="note">Details of the selected node appear here.</div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='vendor/cytoscape.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/layout-base.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/cose-base.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/cytoscape-fcose.js') }}"></script>
+<script src="{{ url_for('static', filename='js/pages/knowledge_graph.js') }}"></script>
+{% endblock %}

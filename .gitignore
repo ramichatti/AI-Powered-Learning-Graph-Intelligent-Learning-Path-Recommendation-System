@@ -1,0 +1,21 @@
+# local environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# transfer pieces
+_parts/
+
+# large inputs (> 100 MB, GitHub limit) - download them, see README
+data_jobs.csv
+data/raw/data_jobs.csv
+model.safetensors
+models/distilbert-base-uncased/model.safetensors
+
+# logs
+setup_log.txt
+run_log.txt
+.pyenv/
+push_log.txt

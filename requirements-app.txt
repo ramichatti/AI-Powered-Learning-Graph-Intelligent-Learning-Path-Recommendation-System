@@ -1,0 +1,13 @@
+# Libraries needed to run the web app and the tests (no Jupyter).
+# Jupyter is in requirements.txt; on Windows install it from a short folder path
+# (it has very deep files that exceed the 260-character path limit).
+scikit-learn==1.9.1
+numpy>=2.0
+scipy>=1.13
+pandas>=2.2
+joblib>=1.4
+networkx>=3.2
+Flask>=3.0
+matplotlib>=3.8
+seaborn>=0.13
+pytest

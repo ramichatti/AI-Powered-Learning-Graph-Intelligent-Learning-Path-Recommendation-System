@@ -1,0 +1,1 @@
+{"ids_fingerprint": "9fb3cd048cfa475d", "shape": [15000, 768], "seconds": 1237.8545897006989, "n_truncated": 1, "pooling": "mean over attention-mask tokens, L2-normalised"}

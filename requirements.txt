@@ -1,0 +1,23 @@
+# Python 3.11 - 3.13
+# scikit-learn is pinned: the saved .joblib models must be loaded with the version that created them.
+scikit-learn==1.9.1
+numpy>=2.0
+scipy>=1.13
+pandas>=2.2
+joblib>=1.4
+networkx>=3.2
+Flask>=3.0
+matplotlib>=3.8
+seaborn>=0.13
+
+# to open / re-run the notebook
+jupyter
+ipykernel
+
+# tests (optional)
+pytest
+
+# OPTIONAL - only used by the notebook to cross-check the NumPy DistilBERT against the official
+# implementation; the project itself runs without them.
+# torch
+# transformers
