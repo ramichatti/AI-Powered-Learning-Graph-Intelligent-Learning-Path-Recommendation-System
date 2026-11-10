@@ -19,3 +19,6 @@ setup_log.txt
 run_log.txt
 .pyenv/
 push_log.txt
+
+# Windows launchers stay local, not on GitHub
+*.bat
